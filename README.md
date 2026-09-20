@@ -4,3 +4,5 @@ Projeto Integrador de Tecnologia da Informação - Criação de Agenda Digital p
 Mudanças foram feitas na tela de acesso a funcionalidades para garantir a responsividade com as diferentes plataformas.
 
 Novas interfaces foram feitas e o diretório foi atualizado para ficar em concordância com a arquitetura orientada a eventos e camadas.
+
+Tecnologias utilizadas: React Native, Expo Go para configuração de ambientes e bibliotecas.
