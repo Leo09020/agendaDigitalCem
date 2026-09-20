@@ -5,7 +5,7 @@ import Disciplinas from '@/src/features/disciplinas/detalheDisciplinas';
 
 export default function Page() {
   return (
-    <Disciplinas/>
+    <TelaLogin/>
   );
 }
 

@@ -6,19 +6,19 @@ interface propDisciplinas {
     disciplinas: tipoDisciplinas
 
 }
-
-export default function Disciplinas(){
+// Informações sobre as disciplinas
+export default function Disciplinas({disciplinas} : propDisciplinas){
 
     return(
         <View style={estiloDisciplinas.container}>
 
-            <Text style={estiloDisciplinas.titulo}></Text>
-            <Text style={estiloDisciplinas.subtitulo}>Professor: </Text>
+            <Text style={estiloDisciplinas.titulo}>{disciplinas.nome}</Text>
+            <Text style={estiloDisciplinas.subtitulo}>Professor: {disciplinas.professor}</Text>
 
             <View style= {estiloDisciplinas.cardInfo}>
-                <Text style={estiloDisciplinas.infoText}>Horarios: </Text>
-                <Text style={estiloDisciplinas.infoText}>Dias: </Text>
-                <Text style={estiloDisciplinas.infoText}>Id: </Text>
+                <Text style={estiloDisciplinas.infoText}>Horarios: {disciplinas.horario}</Text>
+                <Text style={estiloDisciplinas.infoText}>Dias: {disciplinas.diaSemana}</Text>
+                <Text style={estiloDisciplinas.infoText}>Id: {disciplinas.id}</Text>
             </View>
 
         </View>

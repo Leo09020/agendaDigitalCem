@@ -4,6 +4,8 @@ import {Text, View, StyleSheet, TextInput, Button, Alert} from 'react-native'
 
 import {useState} from 'react'
 
+// Tela de login do aplicativo
+
 export default function TelaAcesso(){
 
     const [email, setEmail] = useState('')

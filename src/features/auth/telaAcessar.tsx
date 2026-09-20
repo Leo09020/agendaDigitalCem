@@ -1,6 +1,6 @@
 // Página principal contendo as principais funcionalidades acessíveis (disciplina, recados, avisos...)
 
-import { Pressable, Text, View } from "react-native";
+import { Platform, View } from "react-native";
 
 import { StyleSheet} from "react-native";
 
@@ -21,17 +21,20 @@ export default function App() {
 
 function MainScreen() {
 
-  return (
-    <View style={estilo.gridConteiner}>  
+  const estiloConteiner = Platform.OS === "web" ? estilo.gridConteinerWeb : estilo.gridConteiner
+
+    return (
+    <View style={estiloConteiner}>  
       {itens.map((item)=>(
       <Funcionalidade
         key={item.id}
         title={item.title}
         onPress={item.action}
       />
-    ))}
+      ))}
     </View>
   );
+
 }
 
 // Estilo aplicado em cada componente e nas tags presentes na aplicação.
@@ -50,6 +53,14 @@ const estilo = StyleSheet.create({
     flexWrap: "wrap",
     justifyContent: "center",
     gap: 25,
+    paddingHorizontal: 30,
+  },
+
+  gridConteinerWeb: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: 35,
     paddingHorizontal: 30,
   },
 
