@@ -36,6 +36,10 @@ export default function TelaAcesso(){
                     <Button title='enviar' onPress={onPressable} color={'#0000FF'}/>
                 </View>
 
+                <View style={estiloAcesso.footerContainer}>
+                    <Text style={estiloAcesso.textFooter}>Primeiro acesso? Entre em contato com a secretaria para solicitar os dados de login</Text>
+                </View>
+
             </SafeAreaView>
         </SafeAreaProvider>
 
@@ -56,6 +60,18 @@ const estiloAcesso = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#ddf1db'
+    },
+
+    footerContainer: {
+        flex: 1,
+        alignItems: 'center',
+        backgroundColor: '#ddf1db',
+        padding: 40
+    },
+
+    textFooter: {
+        fontSize: 15,
+        fontStyle: 'italic'
     },
 
     formContainer : {

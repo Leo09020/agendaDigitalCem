@@ -6,7 +6,7 @@ import { StyleSheet} from "react-native";
 
 import Funcionalidade from '@/src/components/buttons'
 
-import itens from '@/src/components/constants'
+import itens from '@/src/components/acesso'
 
 export default function App() {
 
