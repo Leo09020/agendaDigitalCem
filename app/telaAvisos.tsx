@@ -1,3 +1,4 @@
+import { Card } from 'expo-router/build/react-navigation/stack/views/Stack/Card';
 import {Text, View, StyleSheet, Button, FlatList} from 'react-native'
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context'
  
@@ -25,13 +26,13 @@ interface ItensProps {
 function Itens ({titulo, data, conteudo} : ItensProps) { 
     return (
 
-        <View>
-            <View>
-                <Text>{titulo}</Text>
-                <Text>{data}</Text>
+        <View style={estiloInfo.cardContainer}>
+            <View style={estiloInfo.headerCard}>
+                <Text style={estiloInfo.tituloAviso}>{titulo}</Text>
+                <Text style={estiloInfo.dataAviso}>{data}</Text>
             </View>
             
-            <Text>{conteudo}</Text>
+            <Text style={estiloInfo.conteudoAviso}>{conteudo}</Text>
 
         </View>
 
@@ -49,6 +50,18 @@ export default function Avisos(){
                 <View style={estiloInfo.contentWrapp}>
                     <Text style={estiloInfo.tituloMural}>Mural de avisos</Text>
                 </View>
+                <FlatList
+                    data={info}
+                    keyExtractor={(item) => item.id}
+                    renderItem={({item}) => (
+                        <Itens
+                            titulo={item.titulo}
+                            data={item.data}
+                            conteudo={item.conteudo}
+                        />
+                
+                    )}
+                />
 
             </SafeAreaView>
 
@@ -79,14 +92,11 @@ const estiloInfo = StyleSheet.create({
         flex: 1,
         width: '100%',
         maxWidth: 600,
-        alignItems: 'center'
+        paddingHorizontal: 16
     },
 
     listConteiner: {
-        flex: 1,
-        justifyContent: 'center',
-        flexDirection: 'row',
-        alignItems: 'center'
+        paddingBottom: 20,
     },
 
     infoConteiner: {
@@ -100,9 +110,40 @@ const estiloInfo = StyleSheet.create({
         
     },
 
-    info: {
-        fontSize: 20,
-        textAlign: 'center'
-    }
+    cardContainer: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 12,
+    borderColor: '#E2E8F0',
+    borderWidth: 1,
+    // Efeito de sombra leve
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.08,
+    shadowRadius: 3,
+  },
+  headerCard: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  tituloAviso: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#1E293B',
+  },
+  dataAviso: {
+    fontSize: 12,
+    color: '#64748B',
+    fontWeight: '600',
+  },
+  conteudoAviso: {
+    fontSize: 14,
+    color: '#334155',
+    lineHeight: 20,
+  },
 
 })

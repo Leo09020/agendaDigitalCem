@@ -1,15 +1,28 @@
 import {Pressable, StyleSheet, Text, Platform} from 'react-native'
+import {useRouter, usePathname} from 'expo-router'
+import itens from '@/src/components/acesso'
 
 
 interface menuButtonsProp {
 
     title: string;
-    onPress: () => void
+    route?: string
+    onPress?: () => void
 }
 
-const pressionar = () => alert("opção pressionada")
+export default function Funcionalidades ({title, route, onPress}: menuButtonsProp){
 
-export default function Funcionalidades ({title, onPress}: menuButtonsProp){
+    const router = useRouter()
+
+    const pressionar = () => {
+
+        if(onPress){
+            onPress()
+        } else if (route){
+            router.push(route as any)
+        }
+
+    }
 
     const estiloBotao = Platform.OS === "web"? estiloComponents.buttonWeb : estiloComponents.button
 

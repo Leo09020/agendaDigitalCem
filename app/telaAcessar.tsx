@@ -29,7 +29,7 @@ function MainScreen() {
       <Funcionalidade
         key={item.id}
         title={item.title}
-        onPress={item.action}
+        route={item.route}
       />
       ))}
     </View>
