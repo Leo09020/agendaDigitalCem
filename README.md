@@ -5,4 +5,8 @@ Mudanças foram feitas na tela de acesso a funcionalidades para garantir a respo
 
 Novas interfaces foram feitas e o diretório foi atualizado para ficar em concordância com a arquitetura orientada a eventos e camadas.
 
-Tecnologias utilizadas: React Native, Expo Go para configuração de ambientes e bibliotecas.
+Tecnologias utilizadas: linguagem JavaScript, React Native e bibliotecas Expo para roteamento e navegação (expo - router)
+
+Atualização 1.3 modificou a estrutura das pastas e arquivos
+ - pasta app está sendo utilizada para armazenar as interfaces de usuário e permitir a navegação entre elas
+ - pasta src está responsável pela comunicação e recuperação de informações do servidor.
