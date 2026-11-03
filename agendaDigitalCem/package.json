@@ -22,8 +22,9 @@
     "react-native-worklets": "0.10.1"
   },
   "devDependencies": {
-    "@testing-library/react-native": "^14.0.1",
+    "@testing-library/react-native": "^14.1.0",
     "@types/react": "~19.2.2",
+    "eslint": "^10.14.0",
     "jest-expo": "^57.0.5",
     "typescript": "~6.0.3"
   },
@@ -32,13 +33,10 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest --watchAll"
+    "test": "jest"
   },
   "jest": {
     "preset": "jest-expo",
-    "setupFilesAfterEnv": [
-      "@testing-library/jest-native/extend-expect"
-    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
