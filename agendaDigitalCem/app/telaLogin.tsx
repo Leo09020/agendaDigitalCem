@@ -18,30 +18,30 @@ export default function TelaAcesso(){
 
     return(
 
-        <SafeAreaProvider>
-            <SafeAreaView style={estiloAcesso.container}>
-                <View style={estiloAcesso.formContainer}>
+    
+        <View style={estiloAcesso.container}>
+            <View style={estiloAcesso.formContainer}>
 
-                    <Text style={estiloAcesso.titulo}>Acessar agenda:</Text>
+                <Text style={estiloAcesso.titulo}>Acessar agenda:</Text>
 
-                    <Text style={estiloAcesso.label}>email:</Text>
-                    <TextInput style={estiloAcesso.inputs} value={email} onChangeText={setEmail} keyboardType="email-address" autoCapitalize='none' placeholder='Digite seu email'></TextInput>
+                <Text style={estiloAcesso.label}>email:</Text>
+                <TextInput style={estiloAcesso.inputs} value={email} onChangeText={setEmail} keyboardType="email-address" autoCapitalize='none' placeholder='Digite seu email'></TextInput>
 
-                    <Text style={estiloAcesso.label}>senha:</Text>
-                    <TextInput style={estiloAcesso.inputs} value={senha} onChangeText={setSenha} secureTextEntry={true} placeholder="Digite sua senha"></TextInput>
+                <Text style={estiloAcesso.label}>senha:</Text>
+                <TextInput style={estiloAcesso.inputs} value={senha} onChangeText={setSenha} secureTextEntry={true} placeholder="Digite sua senha"></TextInput>
 
-                </View>
+            </View>
 
-                <View style={estiloAcesso.buttonContainer}>
-                    <Button title='enviar' onPress={onPressable} color={'#0000FF'}/>
-                </View>
+            <View style={estiloAcesso.buttonContainer}>
+                <Button title='enviar' onPress={onPressable} color={'#0000FF'}/>
+            </View>
 
-                <View style={estiloAcesso.footerContainer}>
-                    <Text style={estiloAcesso.textFooter}>Primeiro acesso? Entre em contato com a secretaria para solicitar os dados de login</Text>
-                </View>
+            <View style={estiloAcesso.footerContainer}>
+                <Text style={estiloAcesso.textFooter}>Primeiro acesso? Entre em contato com a secretaria para solicitar os dados de login</Text>
+            </View>
 
-            </SafeAreaView>
-        </SafeAreaProvider>
+        </View>
+    
 
     );
 }
