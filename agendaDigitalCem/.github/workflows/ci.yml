@@ -1,4 +1,4 @@
-name: CI Frontend - Agenda Escolar
+name: CI Frontend - Agenda Escolar Digital
 
 on:
   push:
